@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+/* Toast Container Desktop */
+.toast-container {
+    width: 350px !important;
+  font-size: 16px !important;
+  border-radius: 5px !important;
+ 
+  
+}
+
+
+/* Toast Container Tablet */
+@media (max-width: 768px) {
+  .toast-container {
+    width: 280px !important;
+    font-size: 14px !important;
+  }
+}
+
+/* Toast Container Mobile */
+@media (max-width: 480px) {
+  .toast-container {
+    width: 240px !important;
+    font-size: 13px !important;
+  }
+}
+
+
+/* Tablet Email Page Inputs respo */
+
+/* Tab first lable  */
+@media (max-width: 1024px) {
+  .tab-label {
+    left: 38% !important;
+    right: 55% !important;
+    font-size: 15px !important;
+  }
+}
+
+/* Tab Icon fist Inpute  */
+@media (max-width: 1024px) {
+  .tab-icon {
+    left: 34% !important;
+    font-size: 27px !important;
+  }
+}
+
+/* Tablet Email Page Section  */
+
+@media (max-width: 1024px) {
+  .tab-sect {
+    width: 80vw !important;
+    height: 35vh !important;
+    padding-top: 60px !important;
+    padding-bottom: 20px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+
+/* Ipad Reset Password Page Icon Input  */
+@media (max-width: 1024px) {
+  .icon-ipad-reset-pass {
+    left: 34% !important;
+    font-size: 22px !important;
+  }
+}
+
+/* Ipad Reset Password Page Label name  */
+
+@media (max-width: 1024px) {
+  .label-ipad-reset-pass {
+    left: 36% !important;
+    right: 50% !important;
+    font-size: 15px !important;
+  }
+}
+
+/* Ipad Reset Password Page Second Label name  */
+@media (max-width: 1024px) {
+  .label-ipad-reset-pass-second {
+    left: 36% !important;
+    right: 45% !important;
+    font-size: 15px !important;
+  }
+}
+
+/* Mobile Reset Password section  */
+
+@media (max-width: 480px) {
+  .mobile-sect {
+    width: 90vw !important;
+    height: 40vh !important;
+    padding-top: 50px !important;
+    padding-bottom: 20px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* Mobile Forgot Pass Page Icon Input  */
+@media (max-width: 480px) {
+  .Mobile-icon {
+    left: 12% !important;
+    font-size: 22px !important;
+  }
+}
+
+/* Mobile Forgot Pass Page Label name  */
+@media (max-width: 480px) {
+  .Mobile-label {
+    left: 20% !important;
+    right: 65% !important;
+    font-size: 13px !important;
+  }
+}
+
+/* Mobile Reset Password Page Label name  */
+@media (max-width: 480px) {
+  .Mobile-label-reset {
+    left: 20% !important;
+    right: 60% !important;
+    font-size: 13px !important;
+  }
+}
+
+/* Mobile Reset Password Page Second Label name  */
+@media (max-width: 480px) {
+  .Mobile-label-second-reset {
+    left: 20% !important;
+    right: 40% !important;
+    font-size: 13px !important;
+  }
+}
+
+
+/* End Email_page section Responsiveness */
+
+
+
+
+/* Auth Page Responsiveness  */
+
+/* Left Page Responsive in Tablet */
+
+@media (max-width: 1024px) {
+  .Left-section-tab {
+    height: 60vh !important;
+    margin-top: 40px !important;
+    width: 100% !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+}
+
+
+
+
+/* Right Page Responsive in Tablet */
+@media (max-width: 1024px) {
+  .Right-tablet-sec {
+    height: 60vh !important;
+    width: 100% !important;
+    margin-top: 40px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+}
+
