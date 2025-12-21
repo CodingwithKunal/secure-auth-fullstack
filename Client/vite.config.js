@@ -9,6 +9,19 @@ export default defineConfig({
     port:3000,
     cors:true,
     open:true
+  },
+
+   build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          axios: ['axios']
+        }
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['axios']
   }
-  
 })
