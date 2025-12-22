@@ -32,15 +32,10 @@ app.use(cors({
 }))
 
 
-app.options("/*", cors());
-
-
 
 
 app.use('/api/auth',authrouter);
 app.use('/api/user',profileRouter);
-
-
 
 
 
