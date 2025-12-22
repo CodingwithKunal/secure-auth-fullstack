@@ -32,7 +32,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended: true}));
 
 
-app.options('*',cors());
+
 
 app.use('/api/auth',authrouter);
 app.use('/api/user',profileRouter);
