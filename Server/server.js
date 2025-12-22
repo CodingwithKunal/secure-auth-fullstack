@@ -22,6 +22,7 @@ import profileRouter from './router/profileRouter.js';
 
 app.use(cors({
     origin: process.env.CLIENT_URL,
+    methods: ['GET','POST'],
     credentials: true,
 }))
 
@@ -31,9 +32,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended: true}));
 
 
-// app.get('/', (req, res) =>{
-//     res.send("Hello from Server....")
-// })
+app.options('*',cors());
 
 app.use('/api/auth',authrouter);
 app.use('/api/user',profileRouter);
