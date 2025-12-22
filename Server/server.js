@@ -19,17 +19,20 @@ import profileRouter from './router/profileRouter.js';
 
 
 
+app.use(express.json());
+app.use(cookieParser());
+app.use(express.urlencoded({extended: true}));
+
+
 
 app.use(cors({
-    origin: process.env.CLIENT_URL,
-    methods: ['GET','POST'],
+    origin:"https://secure-auth-fullstack.vercel.app/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }))
 
 
-app.use(express.json());
-app.use(cookieParser());
-app.use(express.urlencoded({extended: true}));
+app.options("/*", cors());
 
 
 
