@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended: true}));
 
 
 app.use(cors({
-    origin:"https://secure-auth-fullstack.vercel.app/",
+    origin:"https://secure-auth-fullstack.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }))
