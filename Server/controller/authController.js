@@ -143,7 +143,14 @@ export const resendOtp = async (req, res) => {
 
         await user.save();
 
-        await transporter.sendMail({
+
+          return res.status(200).json({
+            success: true,
+            message: "OTP sent successfully.",
+            userID: user._id
+        });
+
+        transporter.sendMail({
             from: process.env.SENDER_EMAIL,
             to: user.email,
             subject: type === "verify"
@@ -151,12 +158,7 @@ export const resendOtp = async (req, res) => {
                 : "Reset Password OTP",
             text: `Your OTP is ${newOTP}. It expires in 5 minutes.`
         });
-
-        return res.status(200).json({
-            success: true,
-            message: "OTP sent successfully.",
-            userID: user._id
-        });
+ 
 
     } catch (error) {
         return res.status(500).json({
