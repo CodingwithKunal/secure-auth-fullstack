@@ -41,11 +41,7 @@ export const createUser = async (req, res) => {
             maxAge: 7 * 24 * 60 * 60 * 1000,
         })
 
-        res.status(201).json({
-            success: true,
-            message: "User registered successfully",
-             userID: user._id
-        });
+        
 
         // Then we send Email verification code 
         const otp = Math.floor(100000 + Math.random() * 800000).toString()
@@ -53,17 +49,17 @@ export const createUser = async (req, res) => {
         user.expireverfyotp = Date.now() + 30 * 60 * 1000;
         await user.save()
 
+        return res.status(200).json({ success: true, message: "Enter your Verification Code that we sent in your Email for comfirmation.", userID: user._id })
 
-        transporter.sendMail({
+
+        transporter.sendMail = ({
             from: process.env.SENDER_EMAIL,
             to: email,
-            subject: "Welcome to Kunal Authentication World",
-            text: `Hi ${name}, your verification code is ${otp}`,
+            subject: "Welcome Kunal Authentication World",
+            text: `Good to see you in our World . Hii ${name} this is your Verification Code ${otp}. Make sure it will Expire in 30 minutes.`
         })
-
-
-
        
+        
     } catch (error) {
         return res.status(500).json({ success: false, message: error.message })
     }
@@ -130,7 +126,7 @@ export const resendOtp = async (req, res) => {
         const newOTP = Math.floor(100000 + Math.random() * 900000).toString();
 
         //  Handle BOTH OTP types
-
+        
         if (type === "verify") {
             user.verfiedotp = newOTP;
             user.expireverfyotp = Date.now() + 5 * 60 * 1000;
@@ -143,14 +139,7 @@ export const resendOtp = async (req, res) => {
 
         await user.save();
 
-
-          return res.status(200).json({
-            success: true,
-            message: "OTP sent successfully.",
-            userID: user._id
-        });
-
-        transporter.sendMail({
+        await transporter.sendMail({
             from: process.env.SENDER_EMAIL,
             to: user.email,
             subject: type === "verify"
@@ -158,7 +147,12 @@ export const resendOtp = async (req, res) => {
                 : "Reset Password OTP",
             text: `Your OTP is ${newOTP}. It expires in 5 minutes.`
         });
- 
+
+        return res.status(200).json({
+            success: true,
+            message: "OTP sent successfully.",
+            userID: user._id
+        });
 
     } catch (error) {
         return res.status(500).json({
@@ -254,7 +248,7 @@ export const sendResetPasswordOtp = async (req, res) => {
             to: email,
             subject: "Password Reset OTP",
             text: `Hi ${user.name} this is your Password Reset OTP ${otp}. Make sure it will Expire in 30 minutes.`
-
+            
         }
         await transporter.sendMail(sendmail);
         return res.status(200).json({ success: true, message: "Password Reset OTP sent to your email address.", userId: user._id })
@@ -317,7 +311,7 @@ export const resetPassword = async (req, res) => {
 
     try {
 
-        const user = await usermodel.findById(userId);
+        const user = await usermodel.findById(userId );
         if (!user) {
             return res.status(401).json({ success: false, message: "Please Register first your Self !" })
         }
