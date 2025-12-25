@@ -49,16 +49,17 @@ export const createUser = async (req, res) => {
         user.expireverfyotp = Date.now() + 30 * 60 * 1000;
         await user.save()
 
-        return res.status(200).json({ success: true, message: "Enter your Verification Code that we sent in your Email for comfirmation.", userID: user._id })
+       
 
 
-        transporter.sendMail = ({
+        transporter.sendMail ({
             from: process.env.SENDER_EMAIL,
             to: email,
             subject: "Welcome Kunal Authentication World",
             text: `Good to see you in our World . Hii ${name} this is your Verification Code ${otp}. Make sure it will Expire in 30 minutes.`
         })
-       
+        
+       return res.status(200).json({ success: true, message: "Enter your Verification Code that we sent in your Email for comfirmation.", userID: user._id })
         
     } catch (error) {
         return res.status(500).json({ success: false, message: error.message })
