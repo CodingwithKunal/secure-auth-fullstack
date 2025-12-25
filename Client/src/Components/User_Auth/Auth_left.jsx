@@ -93,7 +93,7 @@ const Auth_left = ({setloading}) => {
           localStorage.setItem("userID", data.userID)
           localStorage.setItem("otpPending", "true")
           setstep("otp")
-          toast.success("Enter given OTP to Verify the user")
+          toast.success(data.message)
 
         }
 
