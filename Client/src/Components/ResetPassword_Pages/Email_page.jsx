@@ -186,7 +186,7 @@ function Email_page() {
       <section className= 'tab-sect mobile-sect bg-white/10 backdrop-blur-xl  lg:w-[40vw] h-[50vh] px-10 py-15  lg:h-[55vh] lg:py-10 lg:px-10 rounded-3xl shadow-2xl'>
 
       {loading && (
-        <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50 rounded-3xl">
            <img src="public/833 4.gif" alt="Loading..."/>
         </div>
       )}
