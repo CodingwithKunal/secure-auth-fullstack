@@ -257,7 +257,7 @@ const Auth_left = ({setloading}) => {
 
           {/* --- OTP PAGE --- */}
           {step === "otp" && (
-            <div className="mt-10 "  >
+            <div className="mt-10">
               <h1 className="mb-5 text-center">Enter the OTP sent to your registered email.</h1>
               <div className="flex justify-center mb-8" onPaste={handlePaste}>
                 {Array(6)
