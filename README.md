@@ -8,7 +8,7 @@ It covers everything from user signup, login, OTP verification, password reset, 
 🚀 Live Project Demo (Video)
 
 🎥 Project Walkthrough Video:-
-👉 LinkedIn: https://www.linkedin.com/in/your-link-here
+👉 LinkedIn: https://www.linkedin.com/posts/kunal-verma-2676242b2_mern-fullstackdevelopment-webdevelopment-activity-7410322730534993920-rEKt?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEsy5m8BRwv7hCsNoLJKzfdQY3uvWWkxoZ8
 
 In this video, I explain the full flow of authentication, OTP verification, password reset, protected routes, and backend security implementation.
 
