@@ -7,7 +7,7 @@ It covers everything from user signup, login, OTP verification, password reset, 
 
 🚀 Live Project Demo (Video)
 
-🎥 Project Walkthrough Video:
+🎥 Project Walkthrough Video:-
 👉 LinkedIn: https://www.linkedin.com/in/your-link-here
 
 In this video, I explain the full flow of authentication, OTP verification, password reset, protected routes, and backend security implementation.
@@ -15,101 +15,109 @@ In this video, I explain the full flow of authentication, OTP verification, pass
 🧩 Key Features
 🔐 Authentication & Security
 
-User Sign Up & Sign In
+-> User Sign Up & Sign In
 
-JWT-based authentication
+-> JWT-based authentication
 
-Secure HTTP-only cookies
+-> Secure HTTP-only cookies
 
-Password hashing using bcrypt (10 rounds)
+-> Password hashing using bcrypt (10 rounds)
 
-Protected routes using middleware
+-> Protected routes using middleware
+
 
 📩 OTP Verification System
 
-Email-based OTP verification
+-> Email-based OTP verification
 
-OTP expiration handling
+-> OTP expiration handling
 
-Resend OTP functionality
+-> Resend OTP functionality
 
-OTP validation for:
+-> OTP validation for:
 
-Account verification
+-> Account verification
+
 
 Password reset
 
 🔁 Forgot & Reset Password
 
-Forgot password via email OTP
+-> Forgot password via email OTP
 
-OTP expiry validation
+-> OTP expiry validation
 
-Secure password reset flow
+-> Secure password reset flow
 
-Strong password validation
+-> Strong password validation
+
 
 👤 User Profile
 
-Auth-protected profile API
+-> Auth-protected profile API
 
-Dynamic profile data (name, email, verification status)
+-> Dynamic profile data (name, verification status)
 
-Auto-generated avatar using Gravatar
+-> Auto-generated avatar using Gravatar
 
-Sidebar with smooth transitions
+-> Sidebar with smooth transitions
+
 
 🎨 Frontend UX
 
-Smooth UI with React
+-> Smooth UI with React
 
-Conditional rendering based on auth state
+-> Conditional rendering based on auth state
 
-Loading states & toast notifications
+-> Loading states & toast notifications
+
 
 Responsive design
 
-Clean error handling (no raw status codes shown to users)
+-> Clean error handling (no raw status codes shown to users)
+
 
 🛠️ Tech Stack
-Frontend
+-> Frontend
 
-React.js
+-> React.js
 
-React Router
+-> React Router
 
-Axios
+-> Axios
 
-React Toastify / Hot Toast
+-> React Toastify / Hot Toast
 
-Tailwind CSS
+-> Tailwind CSS
+
 
 Backend
 
-Node.js
+-> Node.js
 
-Express.js
+-> Express.js
 
-MongoDB + Mongoose
+-> MongoDB + Mongoose
 
-JWT (JSON Web Token)
+-> JWT (JSON Web Token)
 
-Bcrypt
+-> Bcrypt
 
-Nodemailer
+-> Nodemailer
 
-Gravatar
+-> Gravatar
+
 
 🔒 Security Practices Used
 
-Password hashing (bcrypt)
+-> Password hashing (bcrypt)
 
-OTP expiration & validation
+-> OTP expiration & validation
 
-HTTP-only cookies
+-> HTTP-only cookies
 
-JWT verification middleware
+-> JWT verification middleware
 
-Protected APIs
+-> Protected APIs
 
-Clean error handling (custom messages instead of raw status codes)
+-> Clean error handling (custom messages instead of raw status codes)
