@@ -1,7 +1,7 @@
 import usermodel from "../Models/user.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import cookie from 'cookie-parser'
+import cookie from 'cookie-parser';
 import transporter from "../config/nodmailer.js";
 
 
@@ -52,7 +52,7 @@ export const createUser = async (req, res) => {
        
 
 
-        transporter.sendMail ({
+       await transporter.sendMail ({
             from: process.env.SENDER_EMAIL,
             to: email,
             subject: "Welcome Kunal Authentication World",
